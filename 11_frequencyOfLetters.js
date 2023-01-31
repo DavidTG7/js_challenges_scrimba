@@ -34,3 +34,4 @@ function countChars(str) {
 // Test:
 
 console.log(countChars("Peggy Porth"));
+console.log(countChars("Mr David Torres"));
