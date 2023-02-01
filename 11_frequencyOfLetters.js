@@ -35,3 +35,5 @@ function countChars(str) {
 
 console.log(countChars("Peggy Porth"));
 console.log(countChars("Mr David Torres"));
+console.log(countChars("Count this phrase"));
+
