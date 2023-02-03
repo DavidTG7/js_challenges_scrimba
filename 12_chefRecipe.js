@@ -24,14 +24,20 @@ const eggScrambleRecipe = [
   "🌶️ hot sauce",
 ];
 
+// function removeDupesFromArray(arr) {
+//   const newArr = new Set(arr);
+
+//   const result = [];
+
+//   newArr.forEach((item) => result.push(item));
+
+//   return result;
+// }
+
+// New solution:
+
 function removeDupesFromArray(arr) {
-  const newArr = new Set(arr);
-
-  const result = [];
-
-  newArr.forEach((item) => result.push(item));
-
-  return result;
+  return [...new Set(arr)];
 }
 
 console.log(removeDupesFromArray(eggScrambleRecipe));
