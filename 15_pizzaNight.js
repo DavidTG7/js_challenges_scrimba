@@ -16,26 +16,32 @@ const gameNightFood = {
   "🍕 pizza": 3,
   "🌮 tacos": 10,
   "🥗 salads": 7,
-  "🍝 pasta": 15
-}
+  "🍝 pasta": 15,
+};
 
 function findTheWinner(obj) {
-  let index = 0
-  const myLength = Object.keys(obj).length
-  const keys = Object.keys(obj)
+  let index = 0;
+  const myLength = Object.keys(obj).length;
+  const keys = Object.keys(obj);
   // console.log(values)
   for (let i = 1; i < myLength; i++) {
-      if (obj[keys[i]] > obj[keys[i - 1]]) {
-          index = i
-      }
+    if (obj[keys[i]] > obj[keys[i - 1]]) {
+      index = i;
+    }
   }
 
-  const result = `The winner is ${keys[index]} with ${obj[keys[index]]} votes!`
+  const result = `The winner is ${keys[index]} with ${obj[keys[index]]} votes!`;
 
-  return result
+  return result;
 }
 
 // Tests:
 
 console.log(findTheWinner(gameNightFood));
 console.log(findTheWinner({ "🐈 cats": 19, "🐕 dogs": 27 }));
+
+const array = [1, 3, 5, 7];
+const obj = { "two": 2, "four": 4, "six": 6, "eight": 8 };
+
+for (let item in array) console.log(array[item]);
+for (let item in obj) console.log(obj[item]);
