@@ -138,10 +138,9 @@ Read about toDateString() for info on formatting a readable date.
 
 function transformData(data) {
   return data.map((item) => {
-    const date = new Date(item.dob.date);
     return {
       fullName: `${item.name.first} ${item.name.last}`,
-      birthday: date.toDateString(),
+      birthday: new Date(item.dob.date).toDateString(),
     };
   });
 }

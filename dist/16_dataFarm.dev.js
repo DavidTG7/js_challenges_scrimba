@@ -128,10 +128,9 @@ Read about toDateString() for info on formatting a readable date.
 
 function transformData(data) {
   return data.map(function (item) {
-    var date = new Date(item.dob.date);
     return {
       fullName: "".concat(item.name.first, " ").concat(item.name.last),
-      birthday: date.toDateString()
+      birthday: new Date(item.dob.date).toDateString()
     };
   });
 }
