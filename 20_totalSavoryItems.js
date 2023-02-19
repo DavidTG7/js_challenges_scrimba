@@ -50,9 +50,8 @@ function totalSavory(arr) {
     .reduce((total, { type, price }) => {
       if (type === "savory") {
         return total + price;
-      } else {
-        return total;
       }
+      return total;
     }, 0)
     .toFixed(2);
 }
