@@ -11,21 +11,20 @@ const api =
   "https://apis.scrimba.com/emojihub/api/all/category/animals-and-nature";
 const flowerBed = document.querySelector(".emoji-flower-bed");
 
-function clearTheGarden(arr) {}
+// May solution part 1:
+function clearTheGarden(arr) {
+  return arr.filter(
+    (item) => item.group === "animal bug" || item.group === "plant flower"
+  );
+}
 
-console.log("&#128053;");
 fetch(api)
   .then((response) => response.json())
+  // My solution part 2:
+  .then((result) => clearTheGarden(result)) // End of my solution.
   .then((data) => {
     data.forEach((emoji) => {
-      // My solution:
-      if (
-        emoji.group === "animal bug" ||
-        emoji.group === "plant flower" ||
-        emoji.group === "plant other"
-      ) {
-        flowerBed.innerHTML += `<li>${emoji.htmlCode}</li>`;
-      }
+      flowerBed.innerHTML += `<li>${emoji.htmlCode}</li>`;
     });
   })
   .catch((err) => console.log(err));
