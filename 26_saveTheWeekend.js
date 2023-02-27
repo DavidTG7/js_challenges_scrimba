@@ -109,7 +109,7 @@ function createDescriptionsFor(data) {
     }
     return {
       ...item,
-      description: `${item.title} is a ${item.duration} minutes ${item.tags[0]} podcast hosted by ${hosts}.`,
+      description: `${item.title} is a ${item.duration} minutes ${item.genre} podcast hosted by ${hosts}.`,
     };
   });
 }
