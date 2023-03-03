@@ -20,10 +20,11 @@ function makeFruitArray(arr) {
 }
 
 function getRandomFruits(arr) {
+  const fruitArr = arr.filter(item => item.group.includes("fruit"))
   let fruits = [];
 
   for (let i = 0; i < 9; i++) {
-    fruits.push(arr[Math.floor(Math.random() * arr.length)].htmlCode);
+    fruits.push(fruitArr[Math.floor(Math.random() * fruitArr.length)].htmlCode);
   }
   return fruits;
 }
